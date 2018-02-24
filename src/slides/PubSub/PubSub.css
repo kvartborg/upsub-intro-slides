@@ -1,0 +1,77 @@
+.pub-sub {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: calc(var(--spacing) * 2);
+}
+
+.pub-sub > div {
+  position: relative;
+  text-align: center;
+  margin-top: calc(var(--spacing) * 4);
+}
+
+.pub-sub .publishers {}
+.pub-sub .dispatcher {}
+.pub-sub .subscribers {}
+
+.pub-sub .block {
+  font-family: var(--font-sans-serif);
+  font-size: 1.4em;
+  padding: calc(var(--spacing) / 4) var(--spacing);
+  margin: 0px var(--spacing);
+  display: inline-block;
+  text-align: center;
+  background: var(--white);
+  border: solid 2px var(--grey);
+  border-radius: var(--border-radius);
+  position: relative;
+  z-index: 2;
+}
+
+.pub-sub .stream {
+  position: absolute;
+  top: 60px !important;
+  left: 50%;
+  width: 30px;
+  height: 200px;
+  margin: 0px auto;
+  margin-top: -50px;
+  margin-left: -15px;
+  display: block;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.pub-sub .stream .logo {
+  animation: flow 3s linear infinite;
+}
+
+.pub-sub .stream .logo svg {
+  transform: rotate(180deg);
+}
+
+.pub-sub .dispatcher .stream.first {
+  height: 300px !important;
+  transform-origin: top;
+  transform: rotate(-45deg);
+}
+
+.pub-sub .dispatcher .stream.last {
+  height: 300px !important;
+  transform-origin: top;
+  transform: rotate(45deg);
+}
+
+.pub-sub .dispatcher .stream.first .logo,
+.pub-sub .dispatcher .stream.middle .logo,
+.pub-sub .dispatcher .stream.last .logo {
+    animation: flow 3s linear infinite;
+    animation-delay: 2s;
+}
+
+@keyframes flow {
+  0% { transform: translate(0px, 0px);}
+  100% { transform: translate(0px, 200px);}
+}
