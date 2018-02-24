@@ -1,0 +1,49 @@
+.auth {
+  height: 500px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: solid 2px var(--grey);
+  border-radius: var(--border-radius);
+  margin: var(--spacing) 0px;
+  padding: calc(var(--spacing) * 2.4) calc(var(--spacing) / 2) 0px;
+  transition: opacity .3s;
+}
+
+.auth.hide {
+  opacity: 0;
+}
+
+.auth > .auth {
+  height: auto;
+  margin: calc(var(--spacing) / 2) 0px;
+  width: 50%;
+  margin: 0px calc(var(--spacing) / 2) calc(var(--spacing) / 2);
+}
+
+.auth .auth:first-child:before {
+  content: 'UpSub Controller';
+}
+
+.auth .auth:last-child:before {
+  content: 'Other app';
+}
+
+.auth .auth .auth:first-child:before {
+  content: 'App-1';
+}
+
+.auth .auth .auth:last-child:before {
+  content: 'App-2';
+}
+
+.auth:before {
+  content: 'root';
+  position: absolute;
+  font-family: var(--font-sans-serif);
+  font-size: 1.4em;
+  color: var(--dark);
+  top: 0px;
+  left: 15px;
+}
