@@ -1,6 +1,5 @@
 import React from 'react'
 import PlaneView from '../components/PlaneView'
-import Logo from '../components/Logo'
 
 export default () => (
   <PlaneView>

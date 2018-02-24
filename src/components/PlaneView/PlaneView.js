@@ -4,21 +4,21 @@ import './PlaneView.css'
 
 const random = (min, max) => Math.floor(Math.random() * max) + min
 
-export default class Introduction extends Component {
+export default class PlaneView extends Component {
   planes = 12
   colors = ['primary', 'primary-light', 'info', 'info-light', 'danger', 'danger-light', 'dark-light', 'grey', 'grey-light']
 
   render () {
     return (
-      <div class='plane-view'>
-        <div class='planes'>
+      <div className='plane-view'>
+        <div className='planes'>
           {this.renderPlanes(1)}
           {this.renderPlanes(2)}
           {this.renderPlanes(3)}
           {this.renderPlanes(4)}
         </div>
-        <div class='content'>
-          <div class='wrapper'>
+        <div className='content'>
+          <div className='wrapper'>
             {this.props.children}
           </div>
         </div>
@@ -34,7 +34,7 @@ export default class Introduction extends Component {
     animation = `trail animation-${animation}`
 
     return (
-      <div class={animation} style={style}>
+      <div key={color + heading + x + y} className={animation} style={style}>
         <Logo color={color} />
       </div>
     )

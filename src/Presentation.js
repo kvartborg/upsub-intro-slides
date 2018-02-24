@@ -8,9 +8,6 @@ import createTheme from "spectacle/lib/themes/default"
 import './Presentation.css'
 
 import Footer from './components/Footer'
-import PlaneView from './components/PlaneView'
-import View from './components/View'
-import Code from './components/Code'
 
 import Start from './slides/Start'
 import Intro from './slides/Intro'
