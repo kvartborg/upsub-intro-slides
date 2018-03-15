@@ -6,6 +6,7 @@ export default () => (
     <h1>Message types</h1>
     <ul>
       <li>Text</li>
+      <li>JSON</li>
       <li>Batch</li>
       <li>Subscribe</li>
       <li>Unsubscribe</li>

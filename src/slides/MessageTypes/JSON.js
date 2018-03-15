@@ -2,13 +2,13 @@ import React from 'react'
 import View from '../../components/View'
 import Code from '../../components/Code'
 
-const code = `text channel/event
+const code = `json channel/event,
 
-Hello world!`
+{ "hello": "world!" }`
 
 export default () => (
   <View>
-    <h1>Text Message</h1>
-    <Code lang='http'>{code}</Code>
+    <h1>JSON Message</h1>
+    <Code lang='js'>{code}</Code>
   </View>
 )
